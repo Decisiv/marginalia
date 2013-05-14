@@ -33,8 +33,8 @@ module Marginalia
       execute_without_marginalia(annotate_sql(sql), name)
     end
 
-    def exec_query_with_marginalia(sql, name = 'SQL', binds = [])
-      exec_query_without_marginalia(annotate_sql(sql), name, binds)
+    def exec_query_with_marginalia(sql, name = 'SQL', binds = [], sqlserver_options = {})
+      exec_query_without_marginalia(annotate_sql(sql), name, binds, sqlserver_options)
     end
   end
 
