@@ -72,7 +72,7 @@ module Marginalia
       end
 
       def self.request_uuid
-        @controller.request.uuid
+        @controller.request.uuid if @controller.respond_to?(:request) && @controller.request.respond_to?(:uuid)
       end
   end
 
